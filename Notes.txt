@@ -1,0 +1,68 @@
+**Episode-01 - Inception**
+
+1) html:5 :- <script>
+        const heading = document.createElement("h1");
+        heading.innerHTML = "Hello Word!";
+        const root = document.getElementById("root");
+        root.appendChild(heading)
+       </script> 
+
+2) const heading = React.createElement("h1", {id:"heading"}, "Hello World!");
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(heading);
+
+3) React.createElement is an {Object} => HTML (Browser Understand) 
+
+4) const parent = React.createElement(
+  "div",
+  { id: "parent" },
+  React.createElement("div", { id: "child" }, [
+    React.createElement("h1", { key: "h1" }, "I am Good!"),
+    React.createElement("h2", { key: "h2" }, "I am Good!"),
+    React.createElement("h3", { key: "h3" }, "I am Good!"),
+  ])
+);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(parent);
+
+5) git Process : - Create New Repo , git init , git branch -M main, git add . , git commit -m "Episode-01", git remote set-url origin git://https://github.com/GGK-UI/My-React.git, git push orgin main,
+
+**Episode-02 - Igniting My App**
+
+1)npm init will install package manager files in the project
+2)package.json is the configuration file for NPM
+3)NPM helps to install dependencies like bundlers like webpack,parcel,babel,vite e.t.c & npm install -D parcel
+4)Two types of dependencies packages Dev dependencies(Development) & Normal dependencies(Production)
+5)Cart(^) minor version update & Tilde(~) Major version update 
+6)package-lock.json is a file which will keep track of dependencies exact version.
+7)Parcel depends on other dependencies which is known as Transitive dependencies.
+8)Node Modules is the collection of dependencies & its huge.
+9)If we have package.json / package-lock.json file we can regenerate the node modules.
+10)npx parcel index.html its an executing package(npx)
+11)its not recommended to install react from CDN links right way is to do with npm.
+12)npm install react
+13)npm install react-dom
+14) # All About PARCEL # 
+    *Dev Build
+    *Local Server
+    *HMR - Hot Module Replacement
+    *File Watching Algorithm - Written C++
+    *Faster Builds - Caching the Files
+    *Image Optimization
+    *Minification / Bundling / Compressing Files
+    *Consistant Hashing
+    *Code Splitting
+    *Differential Bundling - Support Older Browsers
+    *Error Display View , Diagnostic & Error Handling
+    *Tree Shaking - Remove Unused Code
+    *Different Dev & Pro bundles
+    (To create a Prod Build npx parcel build index.html & make sure to check package.json & remove this "main": "App.js" which create dist folder)
+    *From HTTP to HTTPS (for more details visit parcejs.org)
+    15)Local -> Git -> Server -> User (Local Packages are Different from Server)
+    16)To run Web App on customize/all Browsers Add below in package.json file
+        "browserList": [
+        "last 2 Chrome version",
+        "last 2 Firefox version"
+        ] (for more details visit browserslist.dev)
+    
+    
