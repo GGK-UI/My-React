@@ -65,4 +65,65 @@ root.render(parent);
         "last 2 Firefox version"
         ] (for more details visit browserslist.dev)
     
-    
+**Episode-03 - Laying the Foundation**
+
+1)npx parcel index.html to replace this command we need to create a script in package.json for dev mode.
+    "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  }, (Now Can use npm start / npm run build)
+2)To Build a Project go to package.json which have all the scriptted commands & its an industry standards in companies.
+3)When React was built below is the way of inserting Code & leads to pyramid / clumsy
+    const heading = React.createElement("h1", { id: "heading" }, "Just React");
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(heading);
+    #JSX - JavaScript XML#
+4)JSX(JavaScript XML) Introduced as a convention to merge HTML & JavaScript to create HTML like syntax
+    const jsx = <h1 id:"jsx">"I love JSX"<h1>;  React Element
+5)JSX Transpilation before reaching to JS Engine with the help of Parcel -> Babel Package / Bundlers. Babel is JS Compiler.
+    (for more details visit https://babeljs.io/)
+6)JSX is a -> React.createElement -> ReactElement -> JS Object -> HTML Element (Render)
+7)JSX Attributes :- id:"" - className="" - tabIndex="" - 
+8)in jsx single line code is valid , if multiline code is needed then it should be wrap with () to Understand its an jsx for babel.
+9)JSX Sanitise the data & CrossScrippting {data}
+    #COMPONENTS#
+10)Components are Two Types in React *Class Based Components & *Functional Components.
+11)Functional Components always Name it with Capital / CamelCase Letters
+
+    ! function HeaderComponent() => <h1>I am Functional Component<h1/>
+
+    ! function HeaderComponent2() => <h1>I am Functional Component<h1/>
+
+    ! function HeaderComponent3() => {
+            return 
+           ( <h1 className="head" 
+            tabIndex="5"
+            >I am Functional Component
+            <h1/>)
+        };
+
+    ! function HeaderComponent3  = function () {
+       return (
+            <h1 className="heading"
+            >I am Functional Component
+            <h1/>
+        )
+    }; 
+
+    <- React Function Component is an Function which will return a piece of JSX Code / ReactElement  ->
+12) Component Composition is composing two components one inside another
+    // React Component / component Example
+
+        const TitleComponent = () => <h1 id="heading" tabIndex="5">I am Just React</h1>;
+
+        const HeadingComponent = () => (
+        <div id="container">
+            <TitleComponent/>
+            <h1 className="heading">I am Function Component</h1>
+        </div>
+        );
+
+
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(<HeadingComponent/>);
