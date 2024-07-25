@@ -127,3 +127,29 @@ root.render(parent);
 
         const root = ReactDOM.createRoot(document.getElementById("root"));
         root.render(<HeadingComponent/>);
+
+**Episode-04 - Show The Code** 
+
+1)Planning & Visual UX for creating any Web App is important
+    *Header, *Body, *Footer, customize requirements like Logo , search bar , container e.t.c 
+2)We can write inline CSS like jsx HTML in JS its not recommended to use inline CSS.
+    const bgColor =  style: bagroundColor: yellow;
+
+        <restro-Card>{bfColor}</restro-Card>
+
+    <div className="resCard" style= {{bagroundColor: "ff00f"}}> </div>
+
+    ##PROPS##
+3)Its an short form of Properties & to pass dyanamic data to a component.
+4)Props are just arrguments to a function.
+5) #Config Driven UI# UI is Driven by Configuration -> API & Data for Specific Loaction e.t.c UI is Changing as per Backend Data.
+6)UI Layer & Data Layer => Web App ("id": "362596",)
+7)To Check API's -> Open Website -> Click Inspect -> Go to Network Tab -> Fetch/XHR -> v5? -> Preview ->  Open Response ->  Open Pretty JSON.
+8)Just Created Re-Usable Card Component & Render it with Dynamic Data.
+    ##Best Practises of Code Review##
+9)Code Optimization is Very important
+10)Use Destructuring  of Arry / Object
+11) Use Map() / for Loop to iittrating overa an arry of list e.t.c
+12)When every use map() function mention key="unique Id" Property. which stops Re-rendering & avoid unnecessary rendering on overall unchange UI/Cards.
+13)its ok to use & Some people Also can use Index Property as well incase if there is no ID in data. 
+   But react it self says that index as keys are bad Practise. If any Order are Number changes it will be an mess.
