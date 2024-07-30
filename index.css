@@ -19,6 +19,10 @@
     font-size: 24px;
 }
 
+.nav-items:hover  {
+    cursor: pointer; 
+}
+
 .nav-items>ul>li {
     padding: 10px;
     margin: 10px;
@@ -26,6 +30,18 @@
 
 .search {
     padding: 10px;
+}
+
+.filter-btn  {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    border-color: floralwhite;
+    background-color: bisque;    
+}
+.filter-btn:hover  {
+    border-color: chocolate;
+    cursor: pointer; 
 }
 
 .restro-container {

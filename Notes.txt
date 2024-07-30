@@ -153,3 +153,37 @@ root.render(parent);
 12)When every use map() function mention key="unique Id" Property. which stops Re-rendering & avoid unnecessary rendering on overall unchange UI/Cards.
 13)its ok to use & Some people Also can use Index Property as well incase if there is no ID in data. 
    But react it self says that index as keys are bad Practise. If any Order are Number changes it will be an mess.
+
+**Episode-05 - Let's Get Hooks**
+1)Re-Structure Code / Folder Structure / Divide The Components
+2) There are Two Types of Exports & Imports
+
+    Default Component
+    * export default component;
+    * import component from "path"
+
+    Named Component/JS.file
+    *export constant / Component
+    *import { constant / component} from "path"
+    
+    ## HOOKS ##
+    1)Hooks are normal JS Utility functions & written by FaceBook Developers in NPM
+    2)Very Important Hooks
+        * Use State
+        * Use Effect
+    3)Use State Hooks :- It is used to maintain the state variable.
+        const [stateVariable , SetStateVariable] = useState([
+            {DATA}
+        ]);
+        SetStateVariable();
+        its an Arry Destructuring on the fly.
+    4)When ever a State Variable updates React will Re-render the component.
+    5)React Uses Re-consilation Algorithm which is also known as React Fiber.
+    6)Virtual DOM is a Re-Presentation of Actual DOM -> React Elements -> Nested Object.
+    7)Diff Algorithm will find the difference between two virtual dom & update with latest render cycle.
+    8)In React-16 A new Algorithm to update the DOM is known as React Fiber. Example:- Git Div!
+    9)React is doing efficient DOM Manupulation -> virtual DOM.
+    10)Updating the UI very Fast by finding out the diff between two DOM's & Updating Third UI.
+
+
+    
