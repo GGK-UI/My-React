@@ -185,5 +185,21 @@ root.render(parent);
     9)React is doing efficient DOM Manupulation -> virtual DOM.
     10)Updating the UI very Fast by finding out the diff between two DOM's & Updating Third UI.
 
+    **Episode-06 - Exploring The Word**
+1)Monolith Architructure :- API,AUTH,DATA,UI,Backend... e.t.c
+    A small changes in UI or Any of the above needs to build/compiled completed project.
+2)Micro Services Architructure :- Different Services & Tech Stacks for Different Jobs. Like (UI,AUTH,BACKEND,..e.t.c)
+    which is known as Seperations of Concerns & Single Responsiblity Principle.
+3)All the above services run on their own ports. & can be deploy on their own URL's.
+4)Two Approcahes to Fetch The Data From API's
+   Approach - 1) Loads -> Api -> Render
+   Approach -2) Loads -> Render-UI ->Api -> Re-render-UI with Data
+   2nd Approch is better User Experiance - UX. React RendersCycles are very fast.
 
+5)* Use Effect Hook
+    useEffect(() => {} , [])
+    Use Effect is a utlity function it will be called the callback function one the complete body component is rendered.
+    If we have to write something which should render after the body component then write in useEffect. 
+6)Conditual Rendering :- It is subject to contion based rendering.
+7)When ever State variables update react reconcil/Re-Rendreing the component.
     

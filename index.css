@@ -30,6 +30,7 @@
 
 .search {
     padding: 10px;
+    display: flex;
 }
 
 .filter-btn  {
@@ -47,10 +48,24 @@
 .restro-container {
     display: flex;
     flex-wrap: wrap;
+    
+}
+.shimmar-container {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .restro-card {
     width: 200px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    padding: 10px;
+    margin: 5px;
+
+}
+.shimmar-card {
+    width: 200px;
+    height: 350px;
     border-radius: 5px;
     background-color: whitesmoke;
     padding: 10px;
@@ -62,7 +77,50 @@
     cursor: pointer;
 }
 
+.shimmar-card:hover {
+    border: 1px solid sandybrown;
+    cursor: pointer;
+}
+
 .logo-1 {
     width: 100%;
     border-radius: 5px;
 }
+
+.log-button {
+    padding: 10px;
+    border-radius: 15px;
+}
+.log-button:hover  {
+    border-color: chocolate;
+    cursor: pointer; 
+}
+
+
+.filter-search {
+    padding: 16px;
+}
+
+.input {
+    border-radius: 5px;
+    background-color: bisque;
+}
+
+
+.input:hover{
+    border-color: chocolate;
+    background-color: bisque;
+    cursor:text;
+}
+
+.search-Btn {
+    border-radius: 5px;
+    background-color: bisque;
+}
+
+.search-Btn:hover {
+    border-color: chocolate;
+    background-color: bisque;
+    cursor: pointer; 
+}
+    
