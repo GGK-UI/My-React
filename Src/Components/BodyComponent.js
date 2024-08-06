@@ -1,6 +1,7 @@
 import RestroCardComponent from "./RestroCardComponent";
 import ShimmarComponent from "./ShimmarComponent";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const BodyComponent = ( ) => {
 
@@ -21,6 +22,7 @@ const BodyComponent = ( ) => {
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.3492985&lng=78.4158587&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
     //data.cards[4].card.card.gridElements.infoWithStyle.restaurants[0].info
+
     const json = await data.json();
     setRestroList(
       json?.data?.cards?.[4]?.card?.card?.gridElements?.infoWithStyle
@@ -56,7 +58,7 @@ const BodyComponent = ( ) => {
       </div>
       <div className="restro-container">
         {filterRest.map((restro) => (
-            <RestroCardComponent key={restro.info.id} resData={restro} />
+            <Link className="link-style" key={restro.info.id} to={"/restaurantMenu/" + restro.info.id }><RestroCardComponent  resData={restro} /></Link>
           ))}
       </div>
     </div>

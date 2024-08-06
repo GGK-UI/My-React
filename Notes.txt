@@ -202,4 +202,30 @@ root.render(parent);
     If we have to write something which should render after the body component then write in useEffect. 
 6)Conditual Rendering :- It is subject to contion based rendering.
 7)When ever State variables update react reconcil/Re-Rendreing the component.
+
+    **Episode-07 - Finding The Path** 
+1)useEffect is called on every time of component render. the dependency array changes the behaviour.
+    if there is no dependency arry it will render on every time component render. 
+    if there is {btnName} in dependency arry it will render on every time {btnName} update.
+2)useState , Never create useState on out of component.. always write inside or above return ().
+    dont use useState in if() {}  else{} conditions.   & for() loop.     
     
+    ## ROUTING ## 
+1)import { createBrowserRouter , RouterProvider } from "react-router-dom";
+    give an path object for routing components.
+2)import { useRouteError } from "react-router-dom";
+    for error handling in react & show error status & error ststus text
+3)Child Routing :- It is to handle nested routes.
+    import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+4)Dont use Anchor Tag in React. The wole page got refreshed.
+    we can navigate to new page with out reloading the new page.
+    import { Link } from "react-router-dom";
+    Link Component <link />
+    <Link to="/">Home</Link>
+    There are two types of routing in web apps
+    * Client side routing (make a Non-network call & data coming from client like different internal components getting interchanged)
+    * Server side routing (make a network call & data coming from server)
+5) *Dynamic Routing with Reusable Component.
+    { path: "/restaurantMenu/:resId" , element: < RestroMenu />} :resId will initiate dynamic routing based on restro id's.
+6) *useParms will help to go dynamic routing based on parameters & resId.
+    import { useParams } from "react-router-dom";

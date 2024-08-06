@@ -61,6 +61,7 @@
     background-color: whitesmoke;
     padding: 10px;
     margin: 5px;
+    
 
 }
 .shimmar-card {
@@ -85,6 +86,7 @@
 .logo-1 {
     width: 100%;
     border-radius: 5px;
+    height: 150px;
 }
 
 .log-button {
@@ -122,5 +124,10 @@
     border-color: chocolate;
     background-color: bisque;
     cursor: pointer; 
+}
+
+.link-style {
+    text-decoration: none; /* Remove underline from the link */
+    color: inherit; /* Inherit color from parent, ensuring the link does not change color */
 }
     
