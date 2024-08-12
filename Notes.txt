@@ -229,3 +229,15 @@ root.render(parent);
     { path: "/restaurantMenu/:resId" , element: < RestroMenu />} :resId will initiate dynamic routing based on restro id's.
 6) *useParms will help to go dynamic routing based on parameters & resId.
     import { useParams } from "react-router-dom";
+
+    **Episode-08 - Class Based Components**
+1)Never Update State variables directly.
+2)Never Compare ComponentDidMount with UseEffectHook
+3)Super(Props)
+4)Important Life Cycle Hooks
+ *Mounting
+ *ComponentDidMount
+ *Updating
+ *ComponentDidUpdate
+ *UnMounting
+ *ComponentWillUnMount

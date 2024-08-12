@@ -29,9 +29,8 @@ const RestroMenu = () => {
     <div className="restro-Menu">
       <h1>{name}</h1>
       <h4>{cuisines + " "}</h4>
-      <h3>{avgRating + " " + "Stars"}</h3>
-      <h4>{costForTwoMessage}</h4>
-      <h5>{areaName}</h5>
+      <h3>{avgRating + " " + "Stars"} / {costForTwoMessage}</h3>
+      <h4>{areaName}</h4>
       <h2>Menu</h2>
       <ul>
         {itemCards.map((items, id) => (
