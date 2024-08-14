@@ -2,6 +2,7 @@ import RestroCardComponent from "./RestroCardComponent";
 import ShimmarComponent from "./ShimmarComponent";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../Utils/useOnlineStatus";
 
 const BodyComponent = ( ) => {
 
@@ -31,6 +32,14 @@ const BodyComponent = ( ) => {
     setFilterRest(json?.data?.cards?.[4]?.card?.card?.gridElements?.infoWithStyle
       ?.restaurants);
   };
+
+  const networkStatus = useOnlineStatus();
+
+  if( networkStatus === false) 
+    return (
+    <h1>There is No Newtork Connection 👎</h1>
+    );
+  
   
   return restroList.length === 0 ? <ShimmarComponent /> : (
     <div className="body">

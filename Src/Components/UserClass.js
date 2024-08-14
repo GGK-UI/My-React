@@ -1,4 +1,5 @@
 import React from "react";
+import { json } from "react-router-dom";
 
 class UserClass extends React.Component{
     constructor(props) {
@@ -21,7 +22,7 @@ class UserClass extends React.Component{
         const {myname, mylocation} = this.props
         //Destructure of props
         this.state ={
-            count:0 
+            count:json
         }
         //Creating State
         return (

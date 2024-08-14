@@ -241,3 +241,10 @@ root.render(parent);
  *ComponentDidUpdate
  *UnMounting
  *ComponentWillUnMount
+
+  **Episode-09 - Optimizing Our App**
+1)Custom Hooks :- Its an utility function or any custom function to use as useCustomHook for an component.
+    its helps to seperate the concern functionality.
+2)Lazy Loading / Dynamic Loading , Chunking , Code Splitting are the used words in industry for lazy loading...
+    lazy loading is used to create seperate buldle for the component. which not required to load on every render.
+    its is the code optimization technique used for larger scaalable web applications.

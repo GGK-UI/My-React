@@ -1,4 +1,4 @@
-import React from "react";
+import React, {lazy , Suspense} from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import HeaderComponent from "./Components/HeaderComponent";
@@ -8,6 +8,8 @@ import ContactUs from "./Components/ContactUs";
 import RestroMenu from "./Components/RestroMenu"
 import Error from "./Components/Error";
 
+const InstaDelivery = lazy(() => import("./Components/InstaDelivery"));
+
 const AppLayout = () => {
   return (
     <div className="app">
@@ -16,8 +18,8 @@ const AppLayout = () => {
     </div>
   );
 };
-
 const appBrowserRouter = createBrowserRouter([
+  
   {
     path: "/",
     element: <AppLayout />,
@@ -25,6 +27,7 @@ const appBrowserRouter = createBrowserRouter([
       { path: "/", element: <BodyComponent /> },
       { path: "/aboutus", element: <AboutUs /> },
       { path: "/contactus", element: <ContactUs /> },
+      {path:"/InstaDelivery", element: <Suspense><InstaDelivery/></Suspense>},
       { path: "/restaurantMenu/:resId" , element: < RestroMenu />},
     ],
     errorElement: <Error />,
